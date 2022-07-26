@@ -4,10 +4,25 @@ $primary-color: red
 $primary-background-color: aliceblue
 $thin-border: 1px solid black
 
+body 
+  background-color: $primary-background-color
+  width: 98wv
+  height: 98hw
+
 button
   font-weight: lighter
-  font-size: 40px
+  font-size: 2rem
   color: blue
   background: $primary-background-color
   border: $thin-border
   margin: 1px
+  padding: 10px
+  width: 15rem
+
+  &:hover
+    color: red
+
+nav
+  display: flex
+  justify-content: center
+  gap: 10px
