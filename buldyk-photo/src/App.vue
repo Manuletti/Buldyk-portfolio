@@ -2,15 +2,16 @@
 
 <template>
   <body>
-    <h1>Buldyk production is here to stay</h1>
+    <nav>
+      <button id="nav-buttons">Landscapes</button>
+      <button class="nav-buttons">Street</button>
+      <button class="nav-buttons">Portraits</button>
+      <button class="nav-buttons">Nude</button>
+    </nav>
+    <div class="main">Here will be a picture</div>
+    <div class="info">Here will be a description</div>
   </body>
+  <footer>
+    <p>here is a footer</p>
+  </footer>
 </template>
-
-<style lang="sass">
-  $font-stack: Helvetica, sans-serif
-$primary-color: #333
-
-body
-  font: 100% $font-stack
-  color: $primary-color
-</style>
