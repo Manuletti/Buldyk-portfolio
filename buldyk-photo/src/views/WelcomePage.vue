@@ -30,4 +30,14 @@ h1:hover {
   font-size: 155px;
   text-decoration: underline;
 }
+
+@media (max-width: 576px) {
+  h1 {
+    font-size: 80px;
+    text-decoration: underline;
+  }
+  img {
+    width: auto;
+  }
+}
 </style>
