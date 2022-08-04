@@ -1,17 +1,25 @@
 <script setup lang="ts"></script>
 
 <template>
-  <body>
-    <nav>
-      <button id="nav-buttons">Landscapes</button>
-      <button class="nav-buttons">Street</button>
-      <button class="nav-buttons">Portraits</button>
-      <button class="nav-buttons">Nude</button>
-    </nav>
-    <div class="main">Here will be a picture</div>
-    <div class="info">Here will be a description</div>
-  </body>
-  <footer>
-    <p>here is a footer</p>
-  </footer>
+  <main>
+    <h1>Buldyk production</h1>
+    <img src="../public/img/Welcome2500.jpg" alt="welcome" srcset="" />
+  </main>
 </template>
+
+<style>
+img {
+  display: flex;
+  margin: auto;
+  width: 97vw;
+  height: 97vh;
+}
+
+h1 {
+  position: absolute;
+  color: white;
+  font-size: 150px;
+  margin-top: 30%;
+  margin-left: 5%;
+}
+</style>
