@@ -1,27 +1,31 @@
-$font-stack: Helvetica, sans-serif
-$primary-color: red
+$font-stack: "Oswald", sans-serif 200
+$primary-color: white
 
-$primary-background-color: aliceblue
+$secondary-color: red
+$primary-background-color: black
+
 $thin-border: 1px solid black
+$font: "Oswald", sans-serif 200
 
 body 
   background-color: $primary-background-color
   width: 98wv
   height: 98hw
+  display: flex
 
 button
   font-family: "Oswald", sans-serif
   font-weight: 200
   font-size: xx-large
-  color: white
+  color: $primary-color
   border: $thin-border
   margin: 1px
   padding: 10px
-  width: 15rem
+  width: 10rem
   background-color: black
 
   &:hover
-    color: red
+    color: $secondary-color
 
 nav
   display: flex

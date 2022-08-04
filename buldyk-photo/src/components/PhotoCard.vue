@@ -10,7 +10,7 @@ const photo = defineProps<{
 
 <template>
   <div class="photo">
-    <img :src="photo.source" alt="" />
+    <img :src="photo.source" :alt="photo.title" />
     <h3>{{ photo.title }}, {{ photo.date }}</h3>
     <p>{{ photo.description }}</p>
     <p>{{ photo.info }}</p>
@@ -28,6 +28,7 @@ div {
   font-weight: 200;
 }
 img {
-  max-width: 60%;
+  max-width: 70%;
+  height: auto;
 }
 </style>

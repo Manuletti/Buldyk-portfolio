@@ -8,6 +8,7 @@ const router = createRouter({
   routes: [
     {
       path: "/",
+      redirect: "/welcome",
       name: "index",
       component: AppVue,
     },
