@@ -3,13 +3,14 @@ import { RouterView } from "vue-router";
 </script>
 
 <template>
-  <router-view to="/welcome"></router-view>
+  <router-view></router-view>
 </template>
 
 <style>
 main {
   font-family: "Oswald", sans-serif;
   font-weight: 200;
+  color: white;
 }
 img {
   display: flex;
@@ -20,7 +21,6 @@ img {
 
 h1 {
   position: absolute;
-  color: white;
   font-size: 150px;
   margin-top: 30%;
   margin-left: 5%;
