@@ -27,7 +27,7 @@ h1 {
   margin-left: 5%;
 }
 h1:hover {
-  font-size: 160px;
+  font-size: 155px;
   text-decoration: underline;
 }
 </style>
