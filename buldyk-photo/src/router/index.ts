@@ -1,8 +1,21 @@
-// import { createRouter, createWebHistory } from "vue-router";
+import AppVue from "@/App.vue";
+import WelcomePage from "@/views/WelcomePage.vue";
+import { createRouter, createWebHistory } from "vue-router";
 
-// // const router = createRouter({
-// //   history: createWebHistory(import.meta.env.BASE_URL),
-// //   routes: [],
-// // });
+const router = createRouter({
+  history: createWebHistory(),
+  routes: [
+    {
+      path: "/",
+      name: "index",
+      component: AppVue,
+    },
+    {
+      path: "/welcome",
+      name: "welcome",
+      component: WelcomePage,
+    },
+  ],
+});
 
-// export default router;
+export default router;

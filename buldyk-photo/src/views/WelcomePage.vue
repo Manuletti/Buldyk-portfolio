@@ -1,9 +1,10 @@
-<script setup lang="ts">
-import { RouterView } from "vue-router";
-</script>
+<script setup lang="ts"></script>
 
 <template>
-  <router-view to="/welcome"></router-view>
+  <main>
+    <router-link to="/portfolio"><h1>Buldyk production</h1></router-link>
+    <img src="../../public/img/Welcome2500.jpg" alt="welcome" srcset="" />
+  </main>
 </template>
 
 <style>
@@ -24,5 +25,9 @@ h1 {
   font-size: 150px;
   margin-top: 30%;
   margin-left: 5%;
+}
+h1:hover {
+  font-size: 160px;
+  text-decoration: underline;
 }
 </style>
