@@ -6,6 +6,8 @@ const photoTest = {
   source: "../../public/img/Welcome2500.jpg",
   title: "Nevsky prospect",
   date: 2017,
+  description: "",
+  info: "",
 };
 </script>
 
@@ -16,6 +18,8 @@ const photoTest = {
       :source="photoTest.source"
       :title="photoTest.title"
       :date="photoTest.date"
+      :description="photoTest.description"
+      :info="photoTest.info"
     />
   </main>
 </template>

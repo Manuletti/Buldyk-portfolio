@@ -25,6 +25,7 @@ div {
   align-items: center;
   margin: auto;
   height: 90vh;
+  font-weight: 200;
 }
 img {
   max-width: 60%;
