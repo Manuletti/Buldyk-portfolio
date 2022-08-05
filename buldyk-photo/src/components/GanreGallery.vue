@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const preview = defineProps<{
-  photoList: Array;
+  photoList: Array<object>;
 }>();
 </script>
 <template>
@@ -29,7 +29,7 @@ section {
 }
 
 .preview-img:hover {
-    max-width: 160px;
-    max-height: 160px;
+  max-width: 160px;
+  max-height: 160px;
 }
 </style>
