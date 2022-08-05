@@ -1,14 +1,20 @@
 <script setup lang="ts">
+import NavigationBar from "./NavigationBar.vue";
 const preview = defineProps<{
   photoList: Array<object>;
 }>();
 </script>
 <template>
-  <section>
-    <div class="preview-container" v-for="item in preview.photoList">
-      <img class="preview-img" :src="item.source" />
-    </div>
-  </section>
+  <div>
+    <!--Это костыль, мне кажется. Компонент должен встатраиваться внутрь окружения-->
+    <NavigationBar />
+    <h1>{{ this.$router.ganre}}</h1>
+    <section>
+      <div class="preview-container" v-for="item in preview.photoList">
+        <img class="preview-img" :src="item.source" />
+      </div>
+    </section>
+  </div>
 </template>
 
 <style scoped>
