@@ -2,7 +2,7 @@
 
 <template>
   <nav>
-    <button>Landscapes</button>
+    <router-link to="/portfolio/landscapes">Landscapes</router-link>
     <button>Street</button>
     <button>Portraits</button>
     <button>Nude</button>
