@@ -18,7 +18,6 @@ const photo = defineProps<{
 </template>
 
 <style scoped>
-/* I should make an adaptive design */
 div {
   display: flex;
   flex-direction: column;

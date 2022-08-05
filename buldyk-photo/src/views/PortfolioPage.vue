@@ -1,14 +1,44 @@
 <script setup lang="ts">
 import NavigationBar from "../components/NavigationBar.vue";
-import PhotoCard from "../components/PhotoCard.vue";
+import GanreGallery from "../components/GanreGallery.vue";
 
-const photoTest = {
-  source: "../../public/img/Welcome2500.jpg",
-  title: "Nevsky prospect",
-  date: 2017,
-  description: "",
-  info: "",
-};
+const photoTest = [
+  {
+    source: "../../public/img/Welcome2500.jpg",
+    title: "Nevsky prospect",
+    date: 2017,
+    description: "",
+    info: "",
+  },
+  {
+    source: "../../public/img/IndustrialLandscape.jpg",
+    title: "Industrial Landscape, Moscow",
+    date: 2014,
+    description: "Gagarinskyi TC",
+    info: "",
+  },
+  {
+    source: "../../public/img/LandscapeChemney.jpg",
+    title: "Landscape with a pipe",
+    date: 2016,
+    description: "Spb, Narvskaya",
+    info: "",
+  },
+  {
+    source: "../../public/img/Markov.jpg",
+    title: "Vadim",
+    date: 2015,
+    description: "",
+    info: "",
+  },
+  {
+    source: "../../public/img/NastyaKitchen.jpg",
+    title: "Nastya",
+    date: 2018,
+    description: "",
+    info: "",
+  },
+];
 </script>
 
 <template>
@@ -16,13 +46,7 @@ const photoTest = {
     <div class="nav-btn">Back</div>
     <main>
       <NavigationBar />
-      <PhotoCard
-        :source="photoTest.source"
-        :title="photoTest.title"
-        :date="photoTest.date"
-        :description="photoTest.description"
-        :info="photoTest.info"
-      />
+      <GanreGallery :photoList="photoTest" />
     </main>
     <div class="nav-btn">Next</div>
   </body>
