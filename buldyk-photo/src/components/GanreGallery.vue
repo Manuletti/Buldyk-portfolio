@@ -8,7 +8,6 @@ const preview = defineProps<{
   <div>
     <!--Это костыль, мне кажется. Компонент должен встатраиваться внутрь окружения-->
     <NavigationBar />
-    <h1>{{ this.$router.ganre}}</h1>
     <section>
       <div class="preview-container" v-for="item in preview.photoList">
         <img class="preview-img" :src="item.source" />

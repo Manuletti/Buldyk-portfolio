@@ -1,14 +1,17 @@
 import AppVue from "@/App.vue";
+import { toRaw } from "vue";
 import WelcomePage from "@/views/WelcomePage.vue";
 import PortfolioPage from "@/views/PortfolioPage.vue";
 import { createRouter, createWebHistory } from "vue-router";
 import GanreGalleryVue from "@/components/GanreGallery.vue";
+import { usePhotoStore } from "@/stores/photos";
 
-const photoTest = [
+let ganreFilter = [
   {
     source: "../../public/img/Welcome2500.jpg",
     title: "Nevsky prospect",
     date: 2017,
+    ganre: "street",
     description: "",
     info: "",
   },
@@ -16,28 +19,8 @@ const photoTest = [
     source: "../../public/img/IndustrialLandscape.jpg",
     title: "Industrial Landscape, Moscow",
     date: 2014,
+    ganre: "landscape",
     description: "Gagarinskyi TC",
-    info: "",
-  },
-  {
-    source: "../../public/img/LandscapeChemney.jpg",
-    title: "Landscape with a pipe",
-    date: 2016,
-    description: "Spb, Narvskaya",
-    info: "",
-  },
-  {
-    source: "../../public/img/Markov.jpg",
-    title: "Vadim",
-    date: 2015,
-    description: "",
-    info: "",
-  },
-  {
-    source: "../../public/img/NastyaKitchen.jpg",
-    title: "Nastya",
-    date: 2018,
-    description: "",
     info: "",
   },
 ];
@@ -66,7 +49,12 @@ const router = createRouter({
       name: "ganre",
       component: GanreGalleryVue,
       props: {
-        photoList: photoTest,
+        photoList: ganreFilter,
+      },
+      beforeEnter: (to, from) => {
+        const photos = usePhotoStore();
+        ganreFilter = toRaw(photos.filteredByGanre);
+        console.log("Data recieved by router: ", ganreFilter);
       },
     },
   ],
