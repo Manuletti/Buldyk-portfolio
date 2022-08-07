@@ -1,12 +1,23 @@
 <script setup lang="ts">
+import { defineProps, toRaw } from 'vue';
 const preview = defineProps<{
-  photoList: Array<object>;
-}>();
+  source: string;
+  title: string;
+  date: string;
+  ganre: string;
+  description?: string;
+  info?: string;
+}>();;
+const photoList = toRaw(preview)
+console.log(toRaw(preview));
+setTimeout(() => {
+  console.log(toRaw(preview));
+}, 3000);
 </script>
 <template>
   <section>
-    <div class="preview-container" v-for="item in preview.photoList">
-      <img class="preview-img" :src="item.source" />
+    <div class="preview-container" v-for="key in photoList">
+      <img class="preview-img" :src="source" />
     </div>
   </section>
 </template>

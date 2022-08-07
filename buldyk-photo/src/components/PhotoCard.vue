@@ -3,6 +3,7 @@ const photo = defineProps<{
   source: string;
   title: string;
   date: number;
+  ganre: string;
   description?: string;
   info?: string;
 }>();

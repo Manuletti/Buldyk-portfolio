@@ -27,6 +27,14 @@ const router = createRouter({
               path: "/portfolio/:ganre",
               name: "ganre-page",
               component: GanreGallery,
+              props: true,
+              // children: [
+              //   {
+              //     path: "/portfolio/:ganre/:photo",
+              //     name: "photocard",
+              //     component: PhotoCard,
+              //   },
+              // ],
             },
           ],
         },
