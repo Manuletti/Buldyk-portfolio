@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { usePhotoStore } from "@/stores/photos";
-import { ref, onUpdated } from "vue";
+import { ref, onUpdated, toRaw } from "vue";
 const photos = usePhotoStore();
 const photoList = ref(photos.filteredByGanre);
 //the problem is that if one enter the page via adress
@@ -12,8 +12,11 @@ onUpdated(() => {
 </script>
 <template>
   <section>
+    <router-view></router-view>
     <div class="preview-container" v-for="item in photoList">
-      <img class="preview-img" :src="item.source" />
+      <router-link :to="{name: 'photocard', params: item}">
+        <img class="preview-img" :src="item.source" />
+      </router-link>
     </div>
   </section>
 </template>

@@ -30,7 +30,7 @@ const router = createRouter({
               component: GanreGallery,
               children: [
                 {
-                  path: "/portfolio/:ganre/:photo",
+                  path: "/portfolio/:ganre/:title",
                   name: "photocard",
                   props: true,
                   component: PhotoCard,

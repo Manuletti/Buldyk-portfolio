@@ -28,7 +28,9 @@ div {
   font-weight: 200;
 }
 img {
-  max-width: 70%;
+  max-width: 85%;
+  max-height: 85vh;
   height: auto;
+  width: auto;
 }
 </style>

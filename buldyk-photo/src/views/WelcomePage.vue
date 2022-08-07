@@ -11,6 +11,8 @@
 div {
   font-family: "Oswald", sans-serif;
   font-weight: 200;
+  height: 100vh;
+  overflow: hidden;
 }
 img {
   display: flex;
