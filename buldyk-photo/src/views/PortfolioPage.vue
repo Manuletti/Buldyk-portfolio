@@ -1,8 +1,5 @@
 <script setup lang="ts">
 import NavigationBar from "../components/NavigationBar.vue";
-import GanreGallery from "../components/GanreGallery.vue";
-
-
 </script>
 
 <template>

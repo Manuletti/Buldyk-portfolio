@@ -7,10 +7,7 @@ const photos = usePhotoStore();
   <nav>
     <router-link
       class="nav-bar-btn"
-      to="/portfolio/landscapes"
-      @click="photos.filterByGanre('landscape')"
-      >Landscapes</router-link
-    >
+      to="/portfolio/landscapes">Landscapes</router-link>
     <router-link class="nav-bar-btn" to="/portfolio/street">Street</router-link>
     <router-link class="nav-bar-btn" to="/portfolio/portraits"
       >Portraits</router-link
