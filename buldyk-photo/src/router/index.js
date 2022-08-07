@@ -2,6 +2,7 @@ import AppVue from "@/App.vue";
 import WelcomePage from "@/views/WelcomePage.vue";
 import PortfolioPage from "@/views/PortfolioPage.vue";
 import GanreGallery from "@/components/GanreGallery.vue";
+import PhotoCard from "@/components/PhotoCard.vue";
 import { createRouter, createWebHistory } from "vue-router";
 
 const router = createRouter({
@@ -27,14 +28,14 @@ const router = createRouter({
               path: "/portfolio/:ganre",
               name: "ganre-page",
               component: GanreGallery,
-              props: true,
-              // children: [
-              //   {
-              //     path: "/portfolio/:ganre/:photo",
-              //     name: "photocard",
-              //     component: PhotoCard,
-              //   },
-              // ],
+              children: [
+                {
+                  path: "/portfolio/:ganre/:photo",
+                  name: "photocard",
+                  props: true,
+                  component: PhotoCard,
+                },
+              ],
             },
           ],
         },

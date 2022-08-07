@@ -1,5 +1,4 @@
 import { defineStore } from "pinia";
-import { toRaw } from "vue";
 
 export const usePhotoStore = defineStore("usePhotos", {
   state() {
@@ -51,12 +50,11 @@ export const usePhotoStore = defineStore("usePhotos", {
   },
   actions: {
     filterByGanre(ganre: string): void {
+      this.filteredByGanre = [];
       this.photoList.forEach((element) => {
-        console.log("Element: ", element.ganre);
         if (element.ganre === ganre) {
           this.filteredByGanre.push(element);
         }
-        console.log("New arr: ", toRaw(this.filteredByGanre));
       });
     },
   },
