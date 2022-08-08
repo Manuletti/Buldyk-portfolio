@@ -1,19 +1,24 @@
 <script setup lang="ts">
-import NavigationBar from "./NavigationBar.vue";
-const preview = defineProps<{
-  photoList: Array<object>;
-}>();
+import { usePhotoStore } from "@/stores/photos";
+import { ref, onUpdated, toRaw } from "vue";
+const photos = usePhotoStore();
+const photoList = ref(photos.filteredByGanre);
+//the problem is that if one enter the page via adress
+//like /portfolio/portraits - the function does't run
+//i can fix it by using Navigation guards, i think
+onUpdated(() => {
+  return (photoList.value = photos.filteredByGanre);
+});
 </script>
 <template>
-  <div>
-    <!--Это костыль, мне кажется. Компонент должен встатраиваться внутрь окружения-->
-    <NavigationBar />
-    <section>
-      <div class="preview-container" v-for="item in preview.photoList">
+  <section>
+    <router-view></router-view>
+    <div class="preview-container" v-for="item in photoList">
+      <router-link :to="{name: 'photocard', params: item}">
         <img class="preview-img" :src="item.source" />
-      </div>
-    </section>
-  </div>
+      </router-link>
+    </div>
+  </section>
 </template>
 
 <style scoped>
