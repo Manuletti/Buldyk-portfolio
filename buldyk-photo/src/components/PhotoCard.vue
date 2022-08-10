@@ -17,4 +17,3 @@ const photo = defineProps<{
     <p class="info">{{ photo.info }}</p>
   </div>
 </template>
-

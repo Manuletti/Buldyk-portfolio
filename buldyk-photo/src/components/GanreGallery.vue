@@ -20,4 +20,3 @@ onUpdated(() => {
     </div>
   </section>
 </template>
-
