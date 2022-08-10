@@ -1,26 +1,25 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div>
-    <router-link to="/portfolio"><h1>Buldyk production</h1></router-link>
-    <img src="../../public/img/Welcome2500.jpg" alt="welcome" srcset="" />
+  <div class="welcome-wallpaper">
+    <router-link to="/portfolio">
+      <h1>Buldyk production</h1>
+    </router-link>
+    <img id="wallpaper-img" src="../../public/img/Welcome2500.jpg" alt="welcome" srcset="" />
   </div>
 </template>
 
-<style>
-div {
-  font-family: "Oswald", sans-serif;
-  font-weight: 200;
+<style scoped>
+.welcome-wallpaper {
   height: 100vh;
   overflow: hidden;
 }
-img {
+#wallpaper-img {
   display: flex;
   margin: auto;
   width: 98vw;
   height: auto;
 }
-
 h1 {
   position: absolute;
   color: white;
@@ -31,15 +30,5 @@ h1 {
 h1:hover {
   font-size: 155px;
   text-decoration: underline;
-}
-
-@media (max-width: 576px) {
-  h1 {
-    font-size: 80px;
-    text-decoration: underline;
-  }
-  img {
-    width: auto;
-  }
 }
 </style>

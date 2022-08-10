@@ -32,5 +32,3 @@ const photos = usePhotoStore();
     <router-link class="nav-bar-btn" to="/portfolio/about">About</router-link>
   </nav>
 </template>
-
-<style scoped></style>

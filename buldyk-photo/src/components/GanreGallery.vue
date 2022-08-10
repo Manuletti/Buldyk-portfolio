@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { usePhotoStore } from "@/stores/photos";
-import { ref, onUpdated, toRaw } from "vue";
+import { ref, onUpdated } from "vue";
 const photos = usePhotoStore();
 const photoList = ref(photos.filteredByGanre);
 //the problem is that if one enter the page via adress
@@ -11,10 +11,10 @@ onUpdated(() => {
 });
 </script>
 <template>
-  <section>
+  <section class="pictures">
     <router-view></router-view>
     <div class="preview-container" v-for="item in photoList">
-      <router-link :to="{name: 'photocard', params: item}">
+      <router-link :to="{ name: 'photocard', params: item }">
         <img class="preview-img" :src="item.source" />
       </router-link>
     </div>
@@ -22,24 +22,15 @@ onUpdated(() => {
 </template>
 
 <style scoped>
-section {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 20px;
-  align-content: center;
-  justify-content: center;
-  margin-top: 2em;
-}
 .preview-img {
-  max-width: 150px;
-  max-height: 150px;
+  max-width: 200px;
+  max-height: 200px;
   height: auto;
   width: auto;
 }
 
 .preview-img:hover {
-  max-width: 160px;
-  max-height: 160px;
+  max-width: 210px;
+  max-height: 210px;
 }
 </style>

@@ -1,42 +1,50 @@
-$font-stack: "Oswald", sans-serif 200
+//fonts settings 
+$font: "Oswald", sans-serif
+$weight-light: 200
 $primary-color: white
+$hover-color: red
 
-$secondary-color: red
+//background-settings
 $primary-background-color: black
 
-$thin-border: 1px solid black
-$font: "Oswald", sans-serif 200
+//Here are global styles 
+// scoped styles are inside the components
+  // scoped styles in: 
+  // WelcomePage,
+div
+  font-family: $font
+  font-weight: $weight-light
+  color: $primary-color
 
-body 
-  background-color: $primary-background-color
-  width: 98wv
-  height: 98hw
+main 
   display: flex
+  flex-direction: column
   margin: auto
   justify-content: center
-  align-content: center
-
-.nav-bar-btn
-  font-family: "Oswald", sans-serif
-  font-weight: 200
-  font-size: xx-large
-  color: $primary-color
-  border: $thin-border
-  margin: 1px
-  padding: 10px
-  width: 10rem
-  background-color: black
-  text-decoration: none
-  text-align: center
-
-  &:hover
-    color: $secondary-color
+  font-family: $font
+  font-weight: $weight-light
 
 nav
   display: flex
+  text-align: center
   justify-content: center
   gap: 10px
 
-div
-  font-family: "Oswald", sans-serif
-  font-weight: 200
+.nav-bar-btn
+  color: $primary-color
+  font-size: xx-large 
+  padding: 10px
+  width: 10rem
+  text-decoration: none
+
+  &:hover
+    color: $hover-color
+
+section
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
+  gap: 20px
+  align-content: center
+  justify-content: center
+  margin-top: 2em
