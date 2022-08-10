@@ -21,16 +21,3 @@ onUpdated(() => {
   </section>
 </template>
 
-<style scoped>
-.preview-img {
-  max-width: 200px;
-  max-height: 200px;
-  height: auto;
-  width: auto;
-}
-
-.preview-img:hover {
-  max-width: 210px;
-  max-height: 210px;
-}
-</style>
